@@ -7,8 +7,6 @@ import java.util.concurrent.Executors;
 
 public class PortScannerApp {
     public static void main(String[] args) throws InterruptedException, IOException {
-        long startTime = System.nanoTime();
-
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter IP: ");
         String host = sc.next();
@@ -24,7 +22,5 @@ public class PortScannerApp {
         }
         Thread.sleep(100);
         executor.shutdown();
-        long endTime = System.nanoTime();
-        System.out.println("Time:" + ((endTime - startTime)/1000000) + "ms");
     }
 }
